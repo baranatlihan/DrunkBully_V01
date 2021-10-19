@@ -35,7 +35,7 @@ public class CarSpawner : MonoBehaviour
 
     private void SpawnCar()
     {        
-        Instantiate(Cars[random.Next(0, Cars.Length)], spawnPoints[random.Next(0, Cars.Length)].position, Quaternion.Euler(0, 180, 0), transform.parent);      
+        Instantiate(Cars[random.Next(0, Cars.Length)], spawnPoints[random.Next(0, spawnPoints.Length)].position, Quaternion.Euler(0, 180, 0), transform.parent);      
     }
 
 }

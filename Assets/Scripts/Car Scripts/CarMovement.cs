@@ -8,7 +8,7 @@ public class CarMovement : MonoBehaviour
     private Vector3 speedVec = new Vector3(0, 0, 0);
  
     [HideInInspector]
-    public float speed = 2.0f;
+    public float speed = 0f;
     [InspectorName("True = X, False = Z")]
     public bool AxisRotate = true;
 

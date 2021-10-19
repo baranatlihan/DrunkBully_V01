@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     static public float ControlTime = 0f;
     static public float staticExitTime = 0f;
-    static public float staticSpeed = 2f;
+    static public float staticSpeed = 1.75f;
     System.Random random = new System.Random();
 
 
