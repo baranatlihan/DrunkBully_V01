@@ -20,12 +20,10 @@ public class HumanDeath : MonoBehaviour
 
         if (tagName == "Player")
         {
-            Debug.Log("1");
             transform.GetChild(1).Find("Armature").Find("Hips").GetComponent<Rigidbody>().AddForce(0, 2f, 0, ForceMode.Impulse);
         }
         else
         {
-            Debug.Log("2");
             transform.GetChild(1).Find("Armature").Find("Hips").GetComponent<Rigidbody>().AddForce(0, 4f, 0, ForceMode.Impulse);
         }
 
