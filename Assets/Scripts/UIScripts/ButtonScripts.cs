@@ -21,7 +21,12 @@ public class ButtonScripts : MonoBehaviour
     
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
-   
+
+    public void GameStart()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 }
