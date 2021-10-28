@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class PlayerArrowVisible : MonoBehaviour
 {
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
-        {
+       if(other.tag == "Player" || other.tag == "Police")
             other.transform.GetChild(2).gameObject.SetActive(true);
-        }
+     
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Player")
-        {
-            other.transform.GetChild(2).gameObject.SetActive(false);
-        }
+        if (other.tag == "Player" || other.tag == "Police")
+            other.transform.GetChild(2).gameObject.SetActive(false);           
+     
     }
+
+
 }
