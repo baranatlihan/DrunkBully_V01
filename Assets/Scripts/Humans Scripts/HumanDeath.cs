@@ -18,9 +18,13 @@ public class HumanDeath : MonoBehaviour
             Destroy(this.gameObject, 5);
         }
 
-        if (tagName == "Player")
+        if (tagName == "Player" && !GameManager.staticRage)
         {
             transform.GetChild(1).Find("Armature").Find("Hips").GetComponent<Rigidbody>().AddForce(0, 2f, 0, ForceMode.Impulse);
+        }
+        else if(tagName == "Player" && GameManager.staticRage)
+        {
+            transform.GetChild(1).Find("Armature").Find("Hips").GetComponent<Rigidbody>().AddForce(0, 3.5f, 0, ForceMode.Impulse);
         }
         else
         {

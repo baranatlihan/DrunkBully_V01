@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     static public float ControlTime = 0f;
     static public float staticExitTime = 0f;
     static public float staticSpeed = 1.75f;
+    static public bool staticRage = false;
     System.Random random = new System.Random();
 
 
@@ -20,11 +21,14 @@ public class GameManager : MonoBehaviour
     [HeaderAttribute("Human lifetime and exit points")]
     public float Speed;
 
+    public bool rage = false;
+
 
 
     private void Awake()
     {
         staticSpeed = Speed;
+        staticRage = rage;
     }
 
     void Start()

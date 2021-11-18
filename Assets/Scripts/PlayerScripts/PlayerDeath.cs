@@ -10,7 +10,7 @@ public class PlayerDeath : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Police" ^ other.gameObject.tag == "Cars")
+        if (other.gameObject.tag == "Police" ^ other.gameObject.tag == "Cars" && !GameManager.staticRage)
         {
             tagName = other.gameObject.tag;
             transform.GetChild(0).gameObject.SetActive(false);
@@ -20,6 +20,7 @@ public class PlayerDeath : MonoBehaviour
             new WaitForSeconds(2);
             GetComponent<PlayerControl>().enabled = false;
         }
+
 
         if (tagName == "Police")
         {
