@@ -8,7 +8,12 @@ using UnityEngine.UI;
 
 public class ButtonScripts : MonoBehaviour
 {
-    
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void Pause()
     {
         Time.timeScale = 0;
@@ -21,12 +26,21 @@ public class ButtonScripts : MonoBehaviour
     
     public void Restart()
     {
+        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+    }
+
+    public void NormalGameStart()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void RageGameStart()
+    {
         SceneManager.LoadScene(2);
     }
 
-    public void GameStart()
-    {
-        SceneManager.LoadScene(2);
+    public void ExitGame() {
+        Application.Quit();
     }
 
 }
