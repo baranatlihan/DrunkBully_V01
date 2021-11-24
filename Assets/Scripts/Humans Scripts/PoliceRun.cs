@@ -8,6 +8,7 @@ public class PoliceRun : MonoBehaviour
     NavMeshAgent myNavMeshAgent;
     private bool control = true;
     public bool rage = false;
+    int deadCount;
     void Awake()
     {      
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -18,6 +19,7 @@ public class PoliceRun : MonoBehaviour
     private void Start()
     {
         this.gameObject.tag = "Police";
+        
     }
     void Update()
     {
@@ -51,6 +53,8 @@ public class PoliceRun : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(true);
             this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
             Destroy(this.gameObject, 3);
+            PlayerPrefs.SetInt("deadCount", PlayerPrefs.GetInt("deadCount") + 2);//for playerprefs   ### POLICE 2 POINTS ###
+            Debug.Log(PlayerPrefs.GetInt("deadCount"));                         //for playerprefs
         }
         transform.GetChild(1).Find("Armature").Find("Hips").GetComponent<Rigidbody>().AddForce(0, 4f, 0, ForceMode.Impulse);
         transform.GetChild(1).Find("Armature").Find("node_id5").GetComponent<Rigidbody>().AddForce(0.2f, 0.2f, 0.2f, ForceMode.Impulse);

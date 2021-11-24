@@ -6,6 +6,9 @@ public class HumanDeath : MonoBehaviour
 {
 
     private string tagName;
+
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Cars" ^ other.gameObject.tag == "Player")
@@ -16,6 +19,8 @@ public class HumanDeath : MonoBehaviour
             GetComponent<RandomDestination>().enabled = false;
             this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
             Destroy(this.gameObject, 5);
+            PlayerPrefs.SetInt("deadCount", PlayerPrefs.GetInt("deadCount") + 1);//for playerprefs
+            Debug.Log(PlayerPrefs.GetInt("deadCount"));                          //for playerprefs
         }
 
         if (tagName == "Player" && !GameManager.staticRage)

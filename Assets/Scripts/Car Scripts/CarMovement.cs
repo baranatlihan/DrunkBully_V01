@@ -69,7 +69,8 @@ public class CarMovement : MonoBehaviour
         {
             control = false;
             Destroy(this.gameObject, 2.5f);
-
+            PlayerPrefs.SetInt("deadCount", PlayerPrefs.GetInt("deadCount") + 5);//for playerprefs ### CAR 5 POINTS ###
+            Debug.Log(PlayerPrefs.GetInt("deadCount"));                          //for playerprefs
         }
 
     }

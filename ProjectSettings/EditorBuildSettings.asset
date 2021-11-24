@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstSceneEvening _Bonus_Level).unity
     guid: 78ac2c326431fc84c9b89caf04bea847
+  - enabled: 1
+    path: Assets/Scenes/ScoreScene.unity
+    guid: f48f6f73303cef844bccd3f7ba47d08c
   m_configObjects: {}

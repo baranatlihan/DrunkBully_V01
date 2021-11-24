@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class GameManager : MonoBehaviour
     static public float staticSpeed = 1.75f;
     static public bool staticRage = false;
     System.Random random = new System.Random();
+
+
+    [Header("Level Settings")]
+    public float levelTime = 0; 
 
 
     [Header("Humans Settings")]
@@ -29,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         staticSpeed = Speed;
         staticRage = rage;
+        Time.timeScale = 1;
     }
 
     void Start()
@@ -36,12 +42,15 @@ public class GameManager : MonoBehaviour
         staticExitTime = exitTime;      
     }
 
-    // Update is called once per frame
+    // Update is called once per frame & ControlTime counting "total" time.
     void Update()
     {
         ControlTime += Time.deltaTime;
 
-
+        if (ControlTime > levelTime)
+        {
+            SceneManager.LoadScene(3);            
+        }
        
 
     }

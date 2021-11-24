@@ -11,7 +11,7 @@ public class ButtonScripts : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene(0);
+        isBackMenu();
     }
 
     public void Pause()
@@ -42,5 +42,24 @@ public class ButtonScripts : MonoBehaviour
     public void ExitGame() {
         Application.Quit();
     }
+
+    public void BacktoMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void BacktoGame()
+    {
+        this.transform.GetChild(5).gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    void isBackMenu()
+    {
+        this.transform.GetChild(5).gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+
 
 }
