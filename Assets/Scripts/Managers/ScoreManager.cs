@@ -39,6 +39,7 @@ public class ScoreManager : MonoBehaviour
             pointWine.transform.position += new Vector3(0, 0.125f, 0) * Time.deltaTime;
         }
         else {
+            //2sn delay eklemek lazým buraya
             ShowPointBottle();
             SceneManager.LoadScene(0);
         }
@@ -49,6 +50,7 @@ public class ScoreManager : MonoBehaviour
     void ShowPointBottle()
     {            
         PlayerPrefs.SetInt("deadCount", 0);//killcounter
+      
     }
 
 
