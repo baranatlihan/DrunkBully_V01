@@ -6701,6 +6701,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8386056847647145938, guid: 9605ee5dea6119e49a6b01a833fe2ef3, type: 3}
   m_PrefabInstance: {fileID: 606720064}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &622782570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3962734923573755573, guid: 51b940207569c17409e8a12d080d77c5, type: 3}
+  m_PrefabInstance: {fileID: 8281453690800268104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &657747871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12093,6 +12098,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7706746627696567058, guid: 11043d3f50c50b145900dbca20d4e3aa, type: 3}
   m_PrefabInstance: {fileID: 1160997806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1164931808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5981211973362163611, guid: 64c942025e3fe424baa399c9a8a8abcf, type: 3}
+  m_PrefabInstance: {fileID: 5981211974403176389}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1169166314
 GameObject:
@@ -21101,7 +21111,7 @@ PrefabInstance:
     - target: {fileID: 5981211973362163620, guid: 64c942025e3fe424baa399c9a8a8abcf, type: 3}
       propertyPath: joystick
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 622782570}
     - target: {fileID: 5981211973362163623, guid: 64c942025e3fe424baa399c9a8a8abcf, type: 3}
       propertyPath: speed
       value: 4
@@ -21357,6 +21367,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 218914629, guid: 4217d38ad56451744be94e8edd39ef9b, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 821013341, guid: 4217d38ad56451744be94e8edd39ef9b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6361441345888332872, guid: 4217d38ad56451744be94e8edd39ef9b, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -21410,6 +21428,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6361441346056987189, guid: 4217d38ad56451744be94e8edd39ef9b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1164931808}
+    - target: {fileID: 6361441346056987189, guid: 4217d38ad56451744be94e8edd39ef9b, type: 3}
       propertyPath: exitTime
       value: 5
       objectReference: {fileID: 0}
@@ -21420,6 +21442,10 @@ PrefabInstance:
     - target: {fileID: 6361441346056987189, guid: 4217d38ad56451744be94e8edd39ef9b, type: 3}
       propertyPath: cars.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361441346056987189, guid: 4217d38ad56451744be94e8edd39ef9b, type: 3}
+      propertyPath: deadAfterMenuTime
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6361441346056987189, guid: 4217d38ad56451744be94e8edd39ef9b, type: 3}
       propertyPath: humans.Array.size

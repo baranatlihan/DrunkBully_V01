@@ -38,8 +38,11 @@ public class ScoreManager : MonoBehaviour
             Debug.Log(GameManager.ControlTime + "asd");
             pointWine.transform.position += new Vector3(0, 0.125f, 0) * Time.deltaTime;
         }
-        else {
-            //2sn delay eklemek lazým buraya
+
+        else if(GameManager.ControlTime > (point / 22)+3f  )
+        {
+            Debug.Log("yes");
+            new WaitForSeconds(2);
             ShowPointBottle();
             SceneManager.LoadScene(0);
         }

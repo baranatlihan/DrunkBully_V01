@@ -13,8 +13,13 @@ public class GameManager : MonoBehaviour
 
 
     [Header("Level Settings")]
-    public float levelTime = 0; 
+    public float levelTime = 0;
 
+
+    [Header("Player Settings")]
+    public GameObject player;
+    [HeaderAttribute("Human lifetime and exit points")]
+    public float deadAfterMenuTime;
 
     [Header("Humans Settings")]
     public GameObject[] humans;
@@ -27,9 +32,8 @@ public class GameManager : MonoBehaviour
     public float Speed;
 
     public bool rage = false;
-
-
-
+    private float tmpTime=100;
+    private bool ifBreaker = false;
     private void Awake()
     {
         staticSpeed = Speed;
@@ -39,7 +43,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        staticExitTime = exitTime;      
+        staticExitTime = exitTime;
+        ifBreaker = false; 
     }
 
     // Update is called once per frame & ControlTime counting "total" time.
@@ -51,12 +56,24 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(3);            
         }
-       
 
+        DeadAfterMenu();
     }
 
 
+    public void DeadAfterMenu()
+    {
+        if (player.GetComponent<PlayerDeath>().isDead == true && ifBreaker == false) 
+        {
+            tmpTime = ControlTime;
+            ifBreaker = true;
+        }
 
+        if(tmpTime + deadAfterMenuTime < ControlTime)
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
 
 }
