@@ -43,20 +43,6 @@ CapsuleCollider:
   m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: -2, z: 0}
---- !u!114 &4521461372571807099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4628825851225362598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8ec64d45c97c043a5b9d3343fa3ab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explodeObj:
-  - {fileID: 8575097549226070513}
 --- !u!54 &5892556236455051018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,6 +147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aed064406bc99c409a7e89d8837c5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightsOut: 1
+  lightObj: {fileID: 0}
+  explode: 1
+  explodeObj:
+  - {fileID: 8575097549226070513}
 --- !u!136 &5892556236723239102
 CapsuleCollider:
   m_ObjectHideFlags: 0
