@@ -12,6 +12,8 @@ TagManager:
   - Stairs
   - Dead
   - Police
+  - Light
+  - RageHit
   layers:
   - Default
   - TransparentFX

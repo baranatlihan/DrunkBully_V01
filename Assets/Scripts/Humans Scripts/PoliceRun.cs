@@ -37,7 +37,7 @@ public class PoliceRun : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Cars")
+        if (other.gameObject.tag == "Cars" || other.gameObject.tag == "Light")
         {
             control = false;
             transform.GetChild(0).gameObject.SetActive(false);
@@ -46,7 +46,7 @@ public class PoliceRun : MonoBehaviour
             Destroy(this.gameObject, 3);
         }
 
-        if(GameManager.staticRage && other.gameObject.tag == "Player")
+        if(GameManager.staticRage && other.gameObject.tag == "Player" )
         {
             control = false;
             transform.GetChild(0).gameObject.SetActive(false);
