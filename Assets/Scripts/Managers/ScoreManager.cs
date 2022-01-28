@@ -10,11 +10,7 @@ public class ScoreManager : MonoBehaviour
     [HideInInspector]
     public int point = 0;
 
-    private void Awake()
-    {
-        PlayerPrefs.SetInt("deadCount", PlayerPrefs.GetInt("deadCount"));
-        Debug.Log("AWAKE:" + PlayerPrefs.GetInt("deadCount"));
-    }
+
     private void Start()
     {
         GameManager.ControlTime = 0;
@@ -22,26 +18,33 @@ public class ScoreManager : MonoBehaviour
         if (point > 240)
         {
             point = 242;
-        }else if (point < 100)
+        }
+        else if (point > 50)
         {
-            point = 66;
+            point = 190;
+        }
+        else if (point >= 20 && point < 50)
+        {
+            point = 100;
+        }
+        else if (point < 20)
+        {
+            point = 50;
         }
 
         Time.timeScale = 1;
-        Debug.Log("START:" + PlayerPrefs.GetInt("deadCount"));
+
     }
 
     private void Update()
     {
         GameManager.ControlTime += Time.deltaTime;
         if (GameManager.ControlTime < point / 22  ){
-            Debug.Log(GameManager.ControlTime + "asd");
             pointWine.transform.position += new Vector3(0, 0.125f, 0) * Time.deltaTime;
         }
 
         else if(GameManager.ControlTime > (point / 22)+3f  )
         {
-            Debug.Log("yes");
             new WaitForSeconds(2);
             ShowPointBottle();
             SceneManager.LoadScene(0);

@@ -30,7 +30,7 @@ public class PoliceRun : MonoBehaviour
 
         if (this.gameObject.tag == "Dead")
         {
-            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            gameObject.GetComponent<Collider>().enabled = false;
         }
     }
 
@@ -43,6 +43,7 @@ public class PoliceRun : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(1).gameObject.SetActive(true);
             this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            this.gameObject.tag = "Dead";
             Destroy(this.gameObject, 3);
         }
 

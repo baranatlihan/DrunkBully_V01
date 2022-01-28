@@ -20,12 +20,11 @@ public class HumanDeath : MonoBehaviour
             this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
             Destroy(this.gameObject, 5);
             PlayerPrefs.SetInt("deadCount", PlayerPrefs.GetInt("deadCount") + 1);//for playerprefs
-            Debug.Log(PlayerPrefs.GetInt("deadCount"));                          //for playerprefs
         }
 
         if (tagName == "Player" && !GameManager.staticRage)
         {
-            transform.GetChild(1).Find("Armature").Find("Hips").GetComponent<Rigidbody>().AddForce(0, 2f, 0, ForceMode.Impulse);
+            transform.GetChild(1).Find("Armature").Find("Hips").GetComponent<Rigidbody>().AddForce(0, 2.5f, 0, ForceMode.Impulse);
         }
         else if(tagName == "Player" && GameManager.staticRage)
         {

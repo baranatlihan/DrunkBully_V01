@@ -44,7 +44,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         staticExitTime = exitTime;
-        ifBreaker = false; 
+        ifBreaker = false;
+        ControlTime = 0f;
     }
 
     // Update is called once per frame & ControlTime counting "total" time.

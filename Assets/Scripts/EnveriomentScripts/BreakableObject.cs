@@ -27,6 +27,8 @@ public class BreakableObject : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(false);
             transform.GetChild(0).gameObject.SetActive(true);
 
+
+
             if (explode)
             {
                 ExplodeEffect();
@@ -49,8 +51,7 @@ public class BreakableObject : MonoBehaviour
 
     }
 
-
-    void ExplodeEffect()
+    public void ExplodeEffect()
     {
         for (int i = 0; i < explodeObj.Length; i++)
         {
@@ -58,7 +59,7 @@ public class BreakableObject : MonoBehaviour
         }
     }
 
-    void RandomExplodeEffect()
+    public void RandomExplodeEffect()
     {
         for(int i = 0; i < explodeObj.Length; i++)
         {
