@@ -7,6 +7,7 @@ public class PlayerDeath : MonoBehaviour
 {
     private string tagName;
     public GameObject joystick;
+    public GameObject timeText;
     [HideInInspector]
     public bool isDead = false;
 
@@ -20,6 +21,7 @@ public class PlayerDeath : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(true);
             this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
             joystick.SetActive(false);
+            timeText.SetActive(false);
             GetComponent<PlayerControl>().enabled = false;
         }
 
