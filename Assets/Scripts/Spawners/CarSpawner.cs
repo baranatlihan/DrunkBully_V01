@@ -16,7 +16,6 @@ public class CarSpawner : MonoBehaviour
     {
         if (SpawnWhenStart)
         {
-            Debug.Log("spawnwhenstart");
             SpawnCar();
         }
     }

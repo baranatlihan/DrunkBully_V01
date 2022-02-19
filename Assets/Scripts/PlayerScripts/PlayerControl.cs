@@ -17,7 +17,6 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
         anim = GetComponentInChildren<Animator> ();
-        Debug.Log(anim);
         anim.enabled = false;
     }
 
