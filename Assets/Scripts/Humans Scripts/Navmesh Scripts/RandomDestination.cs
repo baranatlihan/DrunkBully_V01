@@ -9,7 +9,7 @@ public class RandomDestination : MonoBehaviour
     NavMeshAgent myNavMeshAgent;
     System.Random random = new System.Random();
     private float timeCount = 0f;
-    public Transform[] exitPoints;
+    //public Transform[] exitPoints;
 
     void Start()
     {
@@ -20,10 +20,8 @@ public class RandomDestination : MonoBehaviour
 
 
     void Update()
-    {
-        
+    {       
         timeCount += Time.deltaTime;
-
         /*if (timeCount >= GameManager.staticExitTime)
         {
             SetExitPoint();
@@ -38,12 +36,6 @@ public class RandomDestination : MonoBehaviour
         {
             SetRandomDest();
         }
-
-        
-
-
-
-
     }
 
     void SetRandomDest()

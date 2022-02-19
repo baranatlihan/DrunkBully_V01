@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour
     [HeaderAttribute("Human lifetime and exit points")]
     public float deadAfterMenuTime;
 
-    [Header("Humans Settings")]
+    /*[Header("Humans Settings")]
     public GameObject[] humans;
     [HeaderAttribute("Human lifetime and exit points(not working, in RandomDest script)")]
-    public float exitTime;
+    public float exitTime;*/
 
     [Header("Cars Settings")]
     public GameObject[] cars;
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        staticExitTime = exitTime;
+        //staticExitTime = exitTime;
         ifBreaker = false;
         ControlTime = 0f;
     }
