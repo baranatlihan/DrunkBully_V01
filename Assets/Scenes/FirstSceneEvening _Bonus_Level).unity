@@ -8363,7 +8363,7 @@ MonoBehaviour:
   - {fileID: 677733877}
   - {fileID: 1007032911}
   - {fileID: 883838204}
-  SpawnTime: 2
+  SpawnTime: 1
   SpawnWhenStart: 1
 --- !u!1 &838217129
 GameObject:
@@ -20876,7 +20876,7 @@ MonoBehaviour:
   - {fileID: 1311466448}
   - {fileID: 1566659500}
   - {fileID: 1714005935}
-  SpawnTime: 2
+  SpawnTime: 1
   SpawnWhenStart: 1
 --- !u!4 &2138290606 stripped
 Transform:

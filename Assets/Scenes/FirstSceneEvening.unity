@@ -778,7 +778,7 @@ MonoBehaviour:
   - {fileID: 261539080}
   - {fileID: 6120756540446729939}
   - {fileID: 362730148}
-  SpawnTime: 4
+  SpawnTime: 3
   SpawnWhenStart: 1
 --- !u!1001 &111591859
 PrefabInstance:
@@ -8252,7 +8252,7 @@ MonoBehaviour:
   - {fileID: 677733877}
   - {fileID: 1007032911}
   - {fileID: 883838204}
-  SpawnTime: 4
+  SpawnTime: 3
   SpawnWhenStart: 1
 --- !u!1001 &823025639
 PrefabInstance:
@@ -20408,7 +20408,7 @@ MonoBehaviour:
   - {fileID: 1311466448}
   - {fileID: 1566659500}
   - {fileID: 1714005935}
-  SpawnTime: 3
+  SpawnTime: 2
   SpawnWhenStart: 1
 --- !u!1001 &250980797903064510
 PrefabInstance:
